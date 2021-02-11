@@ -2,10 +2,11 @@
 
 .main {
     background: tan;
-
+    @include flex (space-between, center);
     h1 {
         color: #ddd;
         &:hover {
+            text-decoration: underline;
             @extend %center;
         }
     }
@@ -17,14 +18,16 @@
     h3 {
         color: $brown1;
     }
-}
+    h4 {
+        display: none;
+    }
 
 .minor {
     background-color: silver;
     h1 {
         text-decoration: underline;
         @extend %center;
-        margin-bottom: 100px;
+        margin-bottom: 25px*4;
     }
 
     h2 {
